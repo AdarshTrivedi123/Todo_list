@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+            body{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .data {
+            width: 400px;
+            height: 400px;
+            justify-content: center;
+            align-content: center;
+            background-color: rgb(68, 142, 122);
+            padding: 100px;
+           }
+           .field{
+            margin-top:30px;
+            font-size: 25px;
+           }
+          form{
+            margin-left:100px;
+          }
+         .wel{
+           
+            font-size:20px;
+            font-style:italic;
+         }
+         .size{
+            height:30px;
+            width:200px;
+            margin-top:10px;
+         }
+         .view{
+            font-size:25px;
+            font-style:italic;
+         }
+         .sub{
+	           background-color: rgb(167, 220, 62);
+               border:0px;
+               border-radius: 10px;
+               height:40px;
+               width:40px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="data">
+            <div class="wel">Welcome {{name}}, let's make your day more efficient!!</div>
+            <form action="/add" method="POST">
+                <div class="field">
+                     <label>Task name:</label><br>
+                     <input class="size" type="text" name="tname"><br>
+                </div>
+                
+                <div class="field">
+                     <label>Task Description:</label><br>
+                     <input class="size" type="text" name="dis"><br>
+                </div>
+           
+                <div class="field">
+                    <label>Status:</label><br>
+                    <input class="size" type="text" name="status">
+                </div>
+                 
+                <div class="field" style="margin-left:50px">
+                    <input style="width:80px"class="size sub" type="submit" value="Add Task" name="id">
+                </div>
+            </form>
+           <div class="view"> Want to view your To-do list?<a href="/view" style="color:black">View list</a></div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <div class="data">
+            <div class="wel"> Edit Your To-do list</div>
+            <form action="/changes/{{task_id}}" method="POST">
+                <div class="field">
+                     <label>Task name:</label><br>
+                     <input class="size" type="text" name="tname"><br>
+                </div>
+                
+                <div class="field">
+                     <label>Task Description:</label><br>
+                     <input class="size" type="text" name="dis"><br>
+                </div>
+           
+                <div class="field">
+                    <label>Status:</label><br>
+                    <input class="size" type="text" name="status">
+                </div>
+                 
+                <div class="field" style="margin-left:50px">
+                    <input style="width:80px"class="size sub" type="submit" value="Apply Changes" name="id">
+                </div>
+            </form>
+        
+        </div>
+    </body>
+</html>

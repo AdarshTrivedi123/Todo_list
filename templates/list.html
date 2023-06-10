@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #tdesign {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #tdesign th {
+
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        #tdesign td,
+        #tdesign th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #tdesign tr:nth-child(even) {
+            background-color: rgb(247, 190, 198);
+        }
+
+        #tdesign tr:hover {
+            background-color: rgb(240, 120, 140);
+        }
+       .fa{
+        font-size: 30px;
+       }
+    </style>
+</head>
+
+<body>
+    <table id="tdesign">
+        <tr>
+            <th>Task name</th>
+            <th>Task Description</th>
+            <th>Status</th>
+            <th>Delete/Edit</th>
+        </tr>
+        {% for task_name,dis,status,task_id in data %}
+        <tr>
+            <td>{{task_name}}</td>
+            <td>{{dis}}</td>
+            <td>{{status}}</td>
+            <td ><a style="margin: 20px; color:black" href="/delete/{{task_id}}"><i class="fa fa-trash-o"></i></a><a href="/edit/{{task_id}}" style="color:black"><i class="fa fa-edit"></i></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

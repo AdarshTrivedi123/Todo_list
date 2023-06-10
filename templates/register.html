@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .data {
+            width: 400px;
+            height: 400px;
+            justify-content: center;
+            align-content: center;
+            background-color: rgb(68, 142, 122);
+            padding: 100px;
+
+        }
+
+        .field {
+            margin-top: 20px;
+            background-color: rgb(189, 235, 235);
+            height: 30px;
+            margin-left: 110px;
+            width: 50%;
+        }
+
+        .heading {
+            font-size: 45px;
+            text-align: center;
+            font-style: italic;
+            background-color: rgb(189, 235, 235);
+            margin-bottom: 40px;
+        }
+
+        .ask {
+            text-align: center;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .msg {
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="data">
+        <div class="heading">Register</div>
+        <div class="msg">{{msg}}</div>
+        <form action="http://localhost:5000/signup" method=post>
+            <input type="text" placeholder="User name" name="nm" class="field" required><br>
+            <input type="text" placeholder="E-mail id" name="email" class="field" required><br>
+            <input type="password" placeholder="Password" name="pas" class="field" required><br>
+            <input type="submit" class="field">
+        </form>
+        <div class="ask">already have an account?&nbsp; &nbsp;<a href="/in" style="color:black">log-in here</a> </div>
+    </div>
+
+</body>
+
+</html>
